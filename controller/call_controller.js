@@ -122,7 +122,7 @@ exports.recordVoice = (req, res) => {
       "Please leave a message at the beep.\nPress the star key when finished."
     );
     response.record({
-      action: "/calls/saveVoiceMail",
+      action: "/calls/saveVoice",
       method: "POST",
       maxLength: 3,
       finishOnKey: "*",
