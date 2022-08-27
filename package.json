@@ -1,0 +1,34 @@
+{
+  "name": "twilio_backend_calls",
+  "version": "1.0.0",
+  "description": "make calls and record voice notes",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "set NODE_ENV=development&& nodemon index.js",
+    "prod": "set NODE_ENV=production&& node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ehtisham6699/twilio_backend_Calls.git"
+  },
+  "author": "ehtisham",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.1",
+    "fs": "0.0.1-security",
+    "moment": "^2.29.1",
+    "pg": "^8.6.0",
+    "sequelize": "^5.5.1",
+    "twilio": "^3.80.1"
+  },
+  "bugs": {
+    "url": "https://github.com/ehtisham6699/twilio_backend_Calls/issues"
+  },
+  "homepage": "https://github.com/ehtisham6699/twilio_backend_Calls#readme"
+}

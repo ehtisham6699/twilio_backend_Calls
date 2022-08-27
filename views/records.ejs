@@ -1,0 +1,75 @@
+
+
+  <!-- Container fluid Starts -->
+  <div class="container-fluid">
+
+ 
+              <div class="table-responsive">
+                <table
+                  id="basicExample"
+                  class="
+                    table table-striped table-condensed table-bordered
+                    no-margin
+                  "
+                >
+                <table class="table table-striped table-primary">
+      
+                  <thead>
+                    <tr>
+                      <th>From</th>
+                      <th>Country</th>
+                      <th>To</th>
+                      <th>Country</th>
+                      <th>Duration</th>
+                      <th>Status</th>
+                      <th>Method</th>
+                      <th>VoiceNote</th>
+                    
+                    </tr>
+                  </thead>
+
+                  <tfoot>
+                    <tr>
+                      <th>From</th>
+                      <th>Country</th>
+                      <th>To</th>
+                      <th>Country</th>
+                      <th>Duration</th>
+                      <th>Status</th>
+                      <th>Method</th>
+                      <th>VoiceNote</th>
+                   
+                    </tr>
+                  </tfoot>
+
+                  <tbody>
+                    <%if (calls.length > 0){ %>
+                    <% calls.forEach(function(call){ %>
+                    <tr>
+                      <td><%= call.from %></td>
+                      <td><%= call.FromCountry %></td>
+                      <td><%= call.to %></td>
+                      <td><%= call.ToCountry %></td>
+                      <td><%= call.duration %></td>
+                      <td><%= call.status %></td>
+                      <td><%= call.method %></td>
+                      <%if (call.RecordingUrl!==null){ %>
+                        <td><a href="<%= call.RecordingUrl %>">Link to Voice</a></td>
+                        <% }else{ %>
+                            <td></td>
+                        <% } %>
+                    </tr>
+                    <% })}else{ %>
+                      <tr>
+                          <td>No Records Found </td>
+                          
+                        </tr>
+                      <% } %>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+   
+  </div>
+
+
