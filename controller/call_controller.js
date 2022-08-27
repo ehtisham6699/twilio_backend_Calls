@@ -41,7 +41,7 @@ exports.setup = async (req, res) => {
     res.type("text/xml");
     res.send(gather.toString());
   } catch (error) {
-    return res.send(error.message);
+    return res.send(error);
   }
 };
 //////////////////////inbound call options for selection by user///////////////////////
