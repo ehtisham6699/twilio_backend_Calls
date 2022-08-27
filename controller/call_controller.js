@@ -102,6 +102,8 @@ exports.saveCall = async (req, res) => {
     const update = {
       status: "Completed",
       method: "call",
+      FromCountry: req.body.FromCountry,
+      ToCountry: req.body.ToCountry,
       duration: req.body.DialCallDuration || 0,
     };
     await Calls.update(update, {
@@ -143,6 +145,8 @@ exports.saveVoice = async (req, res) => {
       {
         status: "Completed",
         method: "voiceNote",
+        FromCountry: req.body.FromCountry,
+        ToCountry: req.body.ToCountry,
         RecordingUrl: req.body.RecordingUrl,
         duration: req.body.RecordingDuration,
       },
