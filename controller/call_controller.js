@@ -60,7 +60,7 @@ exports.inbound = async (req, res) => {
         break;
       case "2":
         response.say(" Voice message is selected");
-        res.redirect("/calls/voiceMail");
+        res.redirect("/calls/recordVoice");
         break;
       default:
         response.say("Incorrect Option");
